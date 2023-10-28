@@ -29,3 +29,10 @@ This is working in progress, but you can use it.
 - [ ] Create the controllers
 - [ ] Create the routes
 - [ ] Create the documentation
+
+
+# References
+
+https://rspec.info/documentation/3.12/rspec-core/#install
+
+https://www.ananunesdasilva.com/posts/pagination-in-rails-from-scratch-no-gems
