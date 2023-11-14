@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_10_28_175400) do
+ActiveRecord::Schema.define(version: 2023_11_14_160952) do
 
   create_table "actors", force: :cascade do |t|
     t.string "name"
@@ -28,5 +28,14 @@ ActiveRecord::Schema.define(version: 2023_10_28_175400) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "photos", force: :cascade do |t|
+    t.string "image_url"
+    t.integer "actor_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["actor_id"], name: "index_photos_on_actor_id"
+  end
+
   add_foreign_key "actors", "movies"
+  add_foreign_key "photos", "actors"
 end
